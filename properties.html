@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Properties – PrimeEstate</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">Real<span>Estate</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="properties.html">Properties</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+
+  <section class="page-banner">
+    <h1>Our Properties</h1>
+    <p>Browse our curated collection of premium listings</p>
+  </section>
+
+  <section class="listing-wrap">
+<!--  filter -->
+    <div class="filter-bar">
+      <div class="filter-group">
+        <label for="type-filter">Property Type:</label>
+        <select id="type-filter">
+          <option value="all">All Types</option>
+          <option value="apartment">Apartments</option>
+          <option value="villa">Villas</option>
+          <option value="house">Independent Houses</option>
+          <option value="commercial">Commercial</option>
+        </select>
+      </div>
+    </div>
+
+
+    <!-- PROPERTY GRID -->
+    <div class="prop-grid">
+
+      <div class="prop-card" data-type="villa" data-location="Murudeshwar Karntaka" data-price="28000000">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Sunrise Luxury Villa" />
+          <span class="badge">For Sale</span>
+        </div>
+        <div class="card-body">
+          <h3>Sunrise Luxury Villa</h3>
+          <p class="card-loc">📍 Murudeshwar, Karntaka</p>
+          <p class="card-price">₹2.8 Cr</p>
+          <p class="card-desc">Spacious 4BHK villa with private pool, landscaped garden, and premium finishes
+            throughout.</p>
+          <div class="card-meta"><span>🛏 4 BHK</span><span>🚿 3 Bath</span><span>📐 3,200 sqft</span></div>
+          <a href="property-detail.html?id=1" class="btn btn-primary">View Details</a>
+        </div>
+      </div>
+
+      <div class="prop-card" data-type="apartment" data-location="Honnavar Karntaka" data-price="9500000">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600" alt="Skyline City Apartment" />
+          <span class="badge">For Sale</span>
+        </div>
+        <div class="card-body">
+          <h3>Skyline City Apartment</h3>
+          <p class="card-loc">📍 Honnavar, Karntaka</p>
+          <p class="card-price">₹95 L</p>
+          <p class="card-desc">Modern 3BHK apartment with stunning city views, gym, and 24/7 security.</p>
+          <div class="card-meta"><span>🛏 3 BHK</span><span>🚿 2 Bath</span><span>📐 1,850 sqft</span></div>
+          <a href="property-detail.html?id=2" class="btn btn-primary">View Details</a>
+        </div>
+      </div>
+
+      <div class="prop-card" data-type="house" data-location="Kumta Karntaka" data-price="540000">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600" alt="Green Valley Home" />
+          <span class="badge">For Rent</span>
+        </div>
+        <div class="card-body">
+          <h3>Green Valley Home</h3>
+          <p class="card-loc">📍 Kumta, Karntaka</p>
+          <p class="card-price">₹45,000 / mo</p>
+          <p class="card-desc">Elegant 3BHK independent house with lush garden, modular kitchen, and covered parking.
+          </p>
+          <div class="card-meta"><span>🛏 3 BHK</span><span>🚿 2 Bath</span><span>📐 2,100 sqft</span></div>
+          <a href="property-detail.html?id=3" class="btn btn-primary">View Details</a>
+        </div>
+      </div>
+
+      <div class="prop-card" data-type="apartment" data-location="kondapur Karntaka" data-price="7500000">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Pearl Heights" />
+          <span class="badge">For Sale</span>
+        </div>
+        <div class="card-body">
+          <h3>Pearl Heights Apartment</h3>
+          <p class="card-loc">📍 Kondapur, Karntaka</p>
+          <p class="card-price">₹75 L</p>
+          <p class="card-desc">Well-designed 2BHK apartment in a gated community with clubhouse and swimming pool.</p>
+          <div class="card-meta"><span>🛏 2 BHK</span><span>🚿 2 Bath</span><span>📐 1,250 sqft</span></div>
+          <a href="property-detail.html?id=4" class="btn btn-primary">View Details</a>
+        </div>
+      </div>
+
+      <div class="prop-card" data-type="villa" data-location="film nagar Karntaka" data-price="45000000">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=600" alt="Royal Crest Villa" />
+          <span class="badge">For Sale</span>
+        </div>
+        <div class="card-body">
+          <h3>Royal Crest Villa</h3>
+          <p class="card-loc">📍 Film Nagar, Karntaka</p>
+          <p class="card-price">₹4.5 Cr</p>
+          <p class="card-desc">Ultra-luxury 5BHK villa with home theatre, rooftop terrace, and smart home automation.
+          </p>
+          <div class="card-meta"><span>🛏 5 BHK</span><span>🚿 5 Bath</span><span>📐 5,500 sqft</span></div>
+          <a href="property-detail.html?id=5" class="btn btn-primary">View Details</a>
+        </div>
+      </div>
+
+      <div class="prop-card" data-type="commercial" data-location="hitech city Karntaka" data-price="25000000">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600" alt="Tech Park Office" />
+          <span class="badge">For Sale</span>
+        </div>
+        <div class="card-body">
+          <h3>Tech Park Office Space</h3>
+          <p class="card-loc">📍 HITEC City, Karntaka</p>
+          <p class="card-price">₹2.5 Cr</p>
+          <p class="card-desc">Premium commercial office space in the heart of HITEC City with modern infrastructure.
+          </p>
+          <div class="card-meta"><span>🏢 Commercial</span><span>🚗 Parking</span><span>📐 3,000 sqft</span></div>
+          <a href="property-detail.html?id=6" class="btn btn-primary">View Details</a>
+        </div>
+      </div>
+
+      <div class="prop-card" data-type="house" data-location="madhapur Karntaka" data-price="360000">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600" alt="Cozy Family Home" />
+          <span class="badge">For Rent</span>
+        </div>
+        <div class="card-body">
+          <h3>Cozy Family Home</h3>
+          <p class="card-loc">📍 Madhapur, Karntaka</p>
+          <p class="card-price">₹30,000 / mo</p>
+          <p class="card-desc">Comfortable 3BHK independent house in a quiet neighbourhood, close to schools and
+            hospitals.</p>
+          <div class="card-meta"><span>🛏 3 BHK</span><span>🚿 2 Bath</span><span>📐 1,800 sqft</span></div>
+          <a href="property-detail.html?id=7" class="btn btn-primary">View Details</a>
+        </div>
+      </div>
+
+      <div class="prop-card" data-type="apartment" data-location="kukatpally Karntaka" data-price="5500000">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600" alt="Metro View Apartment" />
+          <span class="badge">For Sale</span>
+        </div>
+        <div class="card-body">
+          <h3>Metro View Apartment</h3>
+          <p class="card-loc">📍 Kukatpally, Karntaka</p>
+          <p class="card-price">₹55 L</p>
+          <p class="card-desc">Affordable 2BHK apartment near metro station with all modern amenities and great
+            connectivity.</p>
+          <div class="card-meta"><span>🛏 2 BHK</span><span>🚿 2 Bath</span><span>📐 1,100 sqft</span></div>
+          <a href="property-detail.html?id=8" class="btn btn-primary">View Details</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">Prime<span>Estate</span></div>
+        <p>Your trusted partner in real estate. We help you find the perfect property that matches your lifestyle and
+          budget.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Property Types</h4>
+        <ul>
+          <li><a href="properties.html">Apartments</a></li>
+          <li><a href="properties.html">Villas</a></li>
+          <li><a href="properties.html">Independent Houses</a></li>
+          <li><a href="properties.html">Commercial</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Contact Us</h4>
+        <p>📍 Plot 45, Road No. 12, Honnavar, karnataka – 581334</p>
+        <p>📞 +91 98765 43210</p>
+        <p>✉️ info@RealEstate.in</p>
+        <p>🕐 Mon – Sat: 9 AM – 7 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 PrimeEstate. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

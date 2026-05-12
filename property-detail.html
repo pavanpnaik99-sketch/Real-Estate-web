@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Property Detail – RealEstate</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <nav>
+    <a href="index.html" class="logo">Real<span>Estate</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="properties.html">Properties</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-banner">
+    <h1 id="bannerTitle">Property Details</h1>
+    <p>
+      <a href="properties.html" style="color: var(--accent)">&#11013; Back to All Properties</a>
+    </p>
+  </section>
+
+  <div class="detail-wrap">
+    <div class="detail-grid">
+      <div>
+        <div class="detail-main-img">
+          <img id="mainImg" src="" alt="Property" />
+        </div>
+        <div class="thumb-row" id="thumbRow"></div>
+      </div>
+
+      <div class="detail-info">
+        <h1 id="propName"></h1>
+        <p class="detail-loc" id="propLoc"></p>
+        <p class="detail-price" id="propPrice"></p>
+        <p class="detail-beds" id="propBeds"></p>
+        <div class="detail-meta" id="propMeta"></div>
+        <p class="detail-desc" id="propDesc"></p>
+
+        <div class="amenities">
+          <h3>Amenities</h3>
+          <div class="amenities-list" id="amenList"></div>
+        </div>
+
+
+        <div class="enq-box">
+          <h4>Interested in this property?</h4>
+          <a href="contact.html" class="btn btn-primary" id="enquireBtn">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">Prime<span>Estate</span></div>
+        <p>
+          Your trusted partner in real estate. We help you find the perfect
+          property that matches your lifestyle and budget.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Property Types</h4>
+        <ul>
+          <li><a href="properties.html">Apartments</a></li>
+          <li><a href="properties.html">Villas</a></li>
+          <li><a href="properties.html">Independent Houses</a></li>
+          <li><a href="properties.html">Commercial</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Contact Us</h4>
+        <p>📍 Plot 45, Road No. 12, Honnavar, karnataka – 581334</p>
+        <p>📞 +91 98765 43210</p>
+        <p>✉️ info@RealEstate.in</p>
+        <p>🕐 Mon – Sat: 9 AM – 7 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 RealEstate. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const properties = {
+      1: {
+        name: "Sunrise Luxury Villa",
+        location: "📍 Murudeshwar, Karntaka",
+        price: "₹2.8 Cr",
+        type: "Villa",
+        beds: "4 BHK",
+        baths: "3 Bath",
+        area: "3,200 sqft",
+        desc: "Sunrise Luxury Villa is a masterpiece of modern architecture nestled in the prestigious Murudeshwar neighbourhood. This stunning 4BHK villa spans 3,200 sqft and features a private swimming pool, beautifully landscaped garden, and premium Italian marble flooring throughout. The open-plan living and dining area flows seamlessly to the outdoor terrace, perfect for entertaining. The chef's kitchen is equipped with top-of-the-line appliances and custom cabinetry. Each bedroom is a private retreat with en-suite bathrooms and walk-in wardrobes. The property also includes a dedicated home office, double garage, and 24/7 security.",
+        images: [
+          "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900",
+          "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400",
+          "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=400",
+          "https://images.unsplash.com/photo-1600210492493-0946911123ea?w=400",
+        ],
+        amenities: [
+          "Private Swimming Pool",
+          "Landscaped Garden",
+          "Home Theatre",
+          "Double Garage",
+          "Modular Kitchen",
+          "24/7 Security",
+          "Power Backup",
+          "Rainwater Harvesting",
+          "CCTV Surveillance",
+          "Club House Access",
+        ],
+      },
+      2: {
+        name: "Skyline City Apartment",
+        location: "📍 Honnavar, Karntaka",
+        price: "₹95 L",
+        type: "Apartment",
+        beds: "3 BHK",
+        baths: "2 Bath",
+        area: "1,850 sqft",
+        desc: "Skyline City Apartment offers breathtaking panoramic views of Karntaka's skyline from the 18th floor of a premium high-rise in Honnavar. This thoughtfully designed 3BHK apartment features floor-to-ceiling windows, a spacious balcony, and high-end finishes. The building offers world-class amenities including a fully equipped gym, rooftop infinity pool, co-working space, and concierge services. Located minutes from top restaurants, malls, and business hubs, this is urban living at its finest.",
+        images: [
+          "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=900",
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=400",
+        ],
+        amenities: [
+          "Infinity Rooftop Pool",
+          "Fully Equipped Gym",
+          "Concierge Service",
+          "Co-working Space",
+          "Visitor Parking",
+          "24/7 Security",
+          "Power Backup",
+          "High-Speed Elevators",
+          "Children's Play Area",
+          "Intercom System",
+        ],
+      },
+      3: {
+        name: "Green Valley Home",
+        location: "📍 Kumta, Karntaka",
+        price: "₹45,000 / mo",
+        type: "House",
+        beds: "3 BHK",
+        baths: "2 Bath",
+        area: "2,100 sqft",
+        desc: "Green Valley Home is a charming 3BHK independent house set in a peaceful, tree-lined street in Kumta — the IT hub of Karntaka. The property features a lush private garden, a spacious modular kitchen, and a large living area with natural light. The master bedroom includes an attached bathroom and walk-in wardrobe. Two covered parking spaces are available. The house is within walking distance of top tech parks, schools, hospitals, and shopping centres, making it ideal for working professionals and families.",
+        images: [
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900",
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=400",
+          "https://images.unsplash.com/photo-1600210492493-0946911123ea?w=400",
+        ],
+        amenities: [
+          "Private Garden",
+          "Modular Kitchen",
+          "Covered Parking (x2)",
+          "Power Backup",
+          "Water Softener",
+          "CCTV Cameras",
+          "Servant Quarter",
+          "Storage Room",
+          "Vastu Compliant",
+          "Near IT Parks",
+        ],
+      },
+      4: {
+        name: "Pearl Heights Apartment",
+        location: "📍 Kondapur, Karntaka",
+        price: "₹75 L",
+        type: "Apartment",
+        beds: "2 BHK",
+        baths: "2 Bath",
+        area: "1,250 sqft",
+        desc: "Pearl Heights is a well-planned 2BHK apartment in a premium gated community in Kondapur. The apartment features a semi-furnished interior with a modular kitchen, vitrified tile flooring, and a spacious balcony. The community offers a clubhouse, swimming pool, jogging track, and children's play area. Excellent connectivity to HITEC City, Kumuta, and the Outer Ring Road makes this an ideal investment or home for young professionals.",
+        images: [
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=900",
+          "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400",
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=400",
+        ],
+        amenities: [
+          "Swimming Pool",
+          "Clubhouse",
+          "Jogging Track",
+          "Children's Play Area",
+          "Covered Parking",
+          "24/7 Security",
+          "Power Backup",
+          "Intercom",
+          "Lift",
+          "Visitor Parking",
+        ],
+      },
+      5: {
+        name: "Royal Crest Villa",
+        location: "📍 Film Nagar, Karntaka",
+        price: "₹4.5 Cr",
+        type: "Villa",
+        beds: "5 BHK",
+        baths: "5 Bath",
+        area: "5,500 sqft",
+        desc: "Royal Crest Villa is the pinnacle of luxury living in Karntaka's exclusive Film Nagar locality. This grand 5BHK villa spans 5,500 sqft across three floors and features a private home theatre, rooftop terrace with city views, smart home automation, and a temperature-controlled wine cellar. The villa is finished with imported marble, custom woodwork, and designer lighting throughout. A private gym, steam room, and infinity pool complete this extraordinary residence. Ideal for those who demand nothing but the best.",
+        images: [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900",
+          "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400",
+          "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400",
+          "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=400",
+        ],
+        amenities: [
+          "Infinity Pool",
+          "Home Theatre",
+          "Smart Home Automation",
+          "Private Gym",
+          "Steam Room",
+          "Wine Cellar",
+          "Rooftop Terrace",
+          "Triple Garage",
+          "Staff Quarters",
+          "24/7 Security",
+        ],
+      },
+      6: {
+        name: "Tech Park Office Space",
+        location: "📍 HITEC City, Karntaka",
+        price: "₹2.5 Cr",
+        type: "Commercial",
+        beds: "Open Plan",
+        baths: "4 Restrooms",
+        area: "3,000 sqft",
+        desc: "A premium commercial office space located in the heart of HITEC City, Karntaka's premier IT and business district. This 3,000 sqft space is spread across a single floor with an open-plan layout, glass-partitioned cabins, a fully equipped conference room, and a modern reception area. The building offers 24/7 access, high-speed internet infrastructure, ample parking, and a food court. Ideal for IT companies, startups, and corporate offices seeking a prestigious address.",
+        images: [
+          "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=900",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=400",
+          "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400",
+        ],
+        amenities: [
+          "Conference Room",
+          "High-Speed Internet",
+          "24/7 Access",
+          "Ample Parking",
+          "Food Court",
+          "Power Backup",
+          "CCTV Surveillance",
+          "Fire Safety Systems",
+          "Lift Access",
+          "Reception Area",
+        ],
+      },
+      7: {
+        name: "Cozy Family Home",
+        location: "📍 Madhapur, Karntaka",
+        price: "₹30,000 / mo",
+        type: "Independent House",
+        beds: "3 BHK",
+        baths: "2 Bath",
+        area: "1,800 sqft",
+        desc: "A comfortable and well-maintained 3BHK independent house in the heart of Madhapur, one of Karntaka's most sought-after residential areas. The house features a spacious living room, a well-equipped kitchen, and a private garden. Located in a quiet, safe neighbourhood with excellent access to schools, hospitals, supermarkets, and public transport. Perfect for families looking for a peaceful home close to all urban conveniences.",
+        images: [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400",
+          "https://images.unsplash.com/photo-1600210492493-0946911123ea?w=400",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=400",
+        ],
+        amenities: [
+          "Private Garden",
+          "Covered Parking",
+          "Power Backup",
+          "Water Purifier",
+          "CCTV Cameras",
+          "Near Schools",
+          "Near Hospitals",
+          "Near Metro",
+          "Vastu Compliant",
+          "Quiet Neighbourhood",
+        ],
+      },
+      8: {
+        name: "Metro View Apartment",
+        location: "📍 Kukatpally, Karntaka",
+        price: "₹55 L",
+        type: "Apartment",
+        beds: "2 BHK",
+        baths: "2 Bath",
+        area: "1,100 sqft",
+        desc: "Metro View Apartment is an affordable and well-connected 2BHK apartment in Kukatpally, just a 5-minute walk from the metro station. The apartment is part of a well-maintained gated community with 24/7 security, power backup, and covered parking. The interiors feature vitrified tile flooring, a modular kitchen, and a spacious balcony. Excellent connectivity to HITEC City, Ameerpet, and the city centre makes this a smart investment with strong rental potential.",
+        images: [
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=900",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400",
+          "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=400",
+        ],
+        amenities: [
+          "Near Metro Station",
+          "Covered Parking",
+          "24/7 Security",
+          "Power Backup",
+          "Modular Kitchen",
+          "Lift",
+          "Intercom",
+          "Children's Play Area",
+          "Visitor Parking",
+          "CCTV Cameras",
+        ],
+      },
+    };
+
+    // Load property ///
+    const id = new URLSearchParams(location.search).get("id");
+    const p = properties[id] || properties[1];
+
+    propName.innerText = p.name;
+    propLoc.innerText = p.location;
+    propPrice.innerText = p.price;
+    propDesc.innerText = p.desc;
+    
+    mainImg.src = p.images[0];
+
+    // Meta-tags //
+    document.getElementById("propMeta").innerHTML =
+      `<span>🏠 ${p.type}</span><span>🛏 ${p.beds}</span><span>🚿 ${p.baths}</span><span>📐 ${p.area}</span>`;
+
+    // amenities //
+    document.getElementById("amenList").innerHTML = p.amenities
+      .map((a) => `<div class="am-item">${a}</div>`).join("");
+
+    // Images //
+    document.getElementById("thumbRow").innerHTML = p.images
+      .map((img) => `<img src="${img}" onclick="mainImg.src='${img}'">`).join("");
+
+  </script>
+</body>
+
+</html>
