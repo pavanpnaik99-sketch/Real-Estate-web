@@ -341,10 +341,12 @@
       `<span>🏠 ${p.type}</span><span>🛏 ${p.beds}</span><span>🚿 ${p.baths}</span><span>📐 ${p.area}</span>`;
 
     // amenities //
+    // not used beacause it is text and not attribute //
     document.getElementById("amenList").innerHTML = p.amenities
       .map((a) => `<div class="am-item">${a}</div>`).join("");
 
     // Images //
+    // '' is used beacause it is attribute //
     document.getElementById("thumbRow").innerHTML = p.images
       .map((img) => `<img src="${img}" onclick="mainImg.src='${img}'">`).join("");
 
