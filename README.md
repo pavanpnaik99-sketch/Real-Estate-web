@@ -34,7 +34,7 @@ real-estate-website/
 ## ⚙️ Installation & Usage
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/real-estate-website.git
+   git clone https://github.com/your-username/real-estate-web.git
    ```
 2. **Navigate to the directory:**
    ```bash
