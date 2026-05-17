@@ -43,9 +43,6 @@ real-estate-website/
 3. **Open the project:**
    Simply open `index.html` in your favorite web browser to view the site.
 
-## 📸 Screenshots
-*(Add screenshots here to showcase your beautiful design!)*
-
 ## 🤝 Contributing
 Contributions are welcome! If you have suggestions for improvements or new features, feel free to open an issue or submit a pull request.
 
@@ -53,4 +50,4 @@ Contributions are welcome! If you have suggestions for improvements or new featu
 This project is open-source and available under the [MIT License](LICENSE).
 
 ---
-Developed with ❤️ by [Your Name]
+Developed with ❤️ by [Pavan Naik]
